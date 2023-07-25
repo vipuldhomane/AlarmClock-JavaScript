@@ -35,6 +35,17 @@ function setAlarm() {
     alert("Please enter valid numbers for hours, minutes, and seconds.");
     return;
   }
+  if (
+    hourInput < 0 ||
+    hourInput > 12 ||
+    minuteInput < 0 ||
+    minuteInput > 59 ||
+    secondInput < 0 ||
+    secondInput > 59
+  ) {
+    alert("Please enter valid numbers for hours, minutes, and seconds.");
+    return;
+  }
 
   const now = new Date();
   let alarmTime = new Date(now); // Declare alarmTime as a let variable
